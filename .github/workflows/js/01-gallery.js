@@ -1,11 +1,10 @@
 // Add imports above this line
-import { galleryItems } from './gallery-items';
+import { galleryItems } from './gallery-items.js';
 // Change code below this line
 
-console.log(galleryItems);
 import "simplelightbox/dist/simple-lightbox.min.css";
 import SimpleLightbox from "simplelightbox"; 
-console.log(galleryItems);
+// console.log(galleryItems);
 
 
 console.log(galleryItems);
@@ -36,4 +35,3 @@ const lightbox = new SimpleLightbox('.gallery a', {
     captionsData: 'alt',
     captionDelay: 250
 });
-<include src="./partials/filename.html"></include>
