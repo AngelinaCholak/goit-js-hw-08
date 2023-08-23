@@ -36,3 +36,4 @@ const lightbox = new SimpleLightbox('.gallery a', {
     captionsData: 'alt',
     captionDelay: 250
 });
+<include src="./partials/filename.html"></include>
