@@ -11,14 +11,14 @@ let feedbackFormState = {
 };
 
 
-const updateFormStateThrottled = _.throttle(() => {
+const updateForm = _.throttle(() => {
     feedbackFormState.email = emailInput.value;
     feedbackFormState.message = messageInput.value;
     localStorage.setItem('feedback-form-state', JSON.stringify(feedbackFormState));
 }, 500); 
 
-emailInput.addEventListener('input', updateFormStateThrottled);
-messageInput.addEventListener('input', updateFormStateThrottled);
+emailInput.addEventListener('input', updateForm);
+messageInput.addEventListener('input', updateForm);
 
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -50,6 +50,6 @@ form.addEventListener('submit', function (event) {
 
 
 window.addEventListener('beforeunload', function () {
-    updateFormStateThrottled.cancel(); 
-    updateFormStateThrottled(); 
+    updateForm.cancel(); 
+    updateForm(); 
 });
